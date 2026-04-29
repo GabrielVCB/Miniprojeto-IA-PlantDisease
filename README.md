@@ -10,7 +10,7 @@ Este repositório contém o **Miniprojeto Acadêmico** desenvolvido para a disci
 ---
 
 ## 👥 Equipe
-*   Aléx Riquelme
+*   Aléx Rhikelme
 *   Gabriel Vera Cruz
 *   Gustavo Igor
 *   Igor Leal
