@@ -1,0 +1,1 @@
+# Miniprojeto-IA-PlantDisease
