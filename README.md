@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
 
-Este repositório contém o **Miniprojeto Acadêmico** desenvolvido para a disciplina de **Inteligência Artificial (2026.1)** na UNICAP[cite: 1, 2]. O objetivo é a classificação automatizada de doenças em folhas de plantas utilizando Redes Neurais Convolucionais (CNN) e técnicas de IA Explicável (XAI).
+Este repositório contém o **Miniprojeto Acadêmico** desenvolvido para a disciplina de **Inteligência Artificial (2026.1)** na UNICAP. O objetivo é a classificação automatizada de doenças em folhas de plantas utilizando Redes Neurais Convolucionais (CNN) e técnicas de IA Explicável (XAI).
 
 ---
 
@@ -57,7 +57,7 @@ O projeto foi desenvolvido em **Python** utilizando **TensorFlow** e **Keras**.
 ## 📈 Resultados e XAI
 A imagem abaixo demonstra o sucesso da nossa contribuição original, onde o **Grad-CAM** identifica com precisão as manchas de doenças na folha:
 
-*(Recomenda-se anexar aqui a imagem `resultado_xai_final_sucesso.png` gerada pelo código)*
+![Resultado Final XAI - Grad-CAM](ResultadoFinalXAI.png)
 
 ---
 
