@@ -36,9 +36,10 @@ Como requisito para a pontuação extra do miniprojeto, implementamos as seguint
 
 ## 📊 Dataset
 Utilizamos o **New Plant Diseases Dataset**, disponível no Kaggle.
-*   **Total de Imagens:** ~87.000 (Reduzido para 10% para viabilizar o treinamento rápido no Colab).
+*   **Total de Imagens:** ~87.000
 *   **Classes:** 38 categorias (doenças e folhas saudáveis).
 *   **Espécies:** 14 tipos de plantas (ex: Tomate, Batata, Maçã, Milho).
+*   **Split:** 80% para treinamento, 20% para validação.
 
 ---
 
@@ -47,17 +48,19 @@ O projeto foi desenvolvido em **Python** utilizando **TensorFlow** e **Keras**.
 
 ### Principais Passos:
 1.  **Pré-processamento:** Redimensionamento para 224x224 px e Normalização.
-2.  **Data Augmentation:** Rotação (±40°), zoom e espelhamento.
-3.  **Transfer Learning:** Fine-tuning parcial utilizando pesos do ImageNet.
-4.  **Treinamento:** Otimizador Adam, Categorical Crossentropy e Dropout (0.5).
-5.  **Explicabilidade (XAI):** Geração de mapas de calor para validação visual das lesões foliares.
+2.  **Data Augmentation:** Rotação (±40°), deslocamento horizontal/vertical (20%), shear (20%), zoom (20%) e espelhamento horizontal.
+3.  **Transfer Learning em Duas Fases:**
+    - **Fase 1 (Aquecimento):** 3 épocas com base_model congelada para estabilizar a última camada.
+    - **Fase 2 (Fine-tuning):** 5 épocas com base_model destravada, usando taxa de aprendizado reduzida (1e-4).
+4.  **Treinamento:** Otimizador Adam, Loss Categorical Crossentropy e Regularização com Dropout (0.5).
+5.  **Explicabilidade (XAI):** Geração de mapas de calor Grad-CAM para validação visual das regiões de ativação da rede neural.
 
 ---
 
 ## 📈 Resultados e XAI
 A imagem abaixo demonstra o sucesso da nossa contribuição original, onde o **Grad-CAM** identifica com precisão as manchas de doenças na folha:
 
-![Resultado Final XAI - Grad-CAM](ResultadoFinalXAI.png)
+![Resultado Final XAI - Grad-CAM](PlantaDoente.jpeg)
 
 ---
 
